@@ -22,6 +22,7 @@ collections:
             - { label: "Description", name: "description", widget: "text"}
     - name: "blogs"
       label: "Blogs"
+      files:
       folder: "content/blogs"
       create: true
       slug: "{{slug}}"
