@@ -1,10 +1,15 @@
 import Head from "next/head"
-import { Component } from 'react'
+import { useRouter } from 'next/router';
 import { attributes, react as HomeContent } from '../content/home.md'
 
-export default class Home extends Component {
-  render() {
+
+export default function  Home (){
+
     let { title, cats } = attributes
+    const router = useRouter();
+    const redirectToAnotherPage = () => {
+      router.push('/blog');
+    };
     return (
       <>
         <Head>
@@ -22,7 +27,9 @@ export default class Home extends Component {
             ))}
           </ul>
         </article>
+        <div>
+          <button onClick={redirectToAnotherPage}>ir para o blog</button>
+        </div>
       </>
     )
-  }
 }
