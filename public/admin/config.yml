@@ -20,9 +20,8 @@ collections:
           fields:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Description", name: "description", widget: "text"}
-    - name: "blogs"
-      label: "Blogs"
-      files:
+    - label: "Blogs"
+      name: "blogs"
       folder: "content/blogs"
       create: true
       slug: "{{slug}}"
